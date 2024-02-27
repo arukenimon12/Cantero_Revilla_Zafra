@@ -12,6 +12,8 @@ namespace Cantero_Revilla_Zafra
         public string name { get; set; }
         public int index { get; set; }
 
+        public string gender { get; set; }
+
         public List<Person> Parents { get; set; } = new List<Person>();
         public List<Person> Children { get; set; } = new List<Person>();
 
@@ -44,6 +46,7 @@ namespace Cantero_Revilla_Zafra
             });
             return valid;
         }
+
         public bool isParent() => Children.Count > 0;
         public bool isChild () => Parents.Count > 0;
     }
